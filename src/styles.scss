@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* Common Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}/* You can add global styles to this file, and also import other style files */

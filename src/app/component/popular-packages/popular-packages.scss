@@ -1,0 +1,235 @@
+/* ================= POPULAR DESTINATIONS SECTION ================= */
+
+.popular-destinations {
+  background: linear-gradient(to bottom, #f8fafc, #eef3f8);
+  padding: 70px 0;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= HEADING ================= */
+
+.section-heading {
+  text-align: center;
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+/* Space between Domestic & International */
+
+.section-heading.second {
+  margin-top: 80px;
+}
+
+/* ================= GRID ================= */
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+
+.destination-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover only for desktop */
+
+@media (hover: hover) {
+  .destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  }
+
+  .destination-card:hover img {
+    transform: scale(1.08);
+  }
+}
+
+/* ================= IMAGE ================= */
+
+.destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* ================= OVERLAY ================= */
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.85)
+  );
+
+  color: #ffffff;
+}
+
+/* ================= TEXT ================= */
+
+.destination-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.price span {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.price h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* ================= BUTTON ================= */
+
+.explore-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ff7a18;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: #ff5e00;
+}
+
+/* ================= VIEW ALL BUTTON ================= */
+
+.view-all-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.view-all-btn {
+  background: #0a3d62;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-all-btn:hover {
+  background: #07406b;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Laptop */
+
+@media (max-width: 1199px) {
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .destination-title {
+    font-size: 18px;
+  }
+
+  .price h2 {
+    font-size: 22px;
+  }
+
+  .section-heading.second {
+    margin-top: 60px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .popular-destinations {
+    padding: 50px 15px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    font-size: 24px;
+  }
+
+  .destination-title {
+    font-size: 18px;
+  }
+
+  .price h2 {
+    font-size: 20px;
+  }
+
+  .view-all-btn {
+    width: 90%;
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+  .section-heading {
+    font-size: 22px;
+  }
+
+  .destination-title {
+    font-size: 16px;
+  }
+
+  .price h2 {
+    font-size: 18px;
+  }
+
+  .explore-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}

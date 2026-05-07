@@ -1,0 +1,211 @@
+.contact {
+  padding: 80px 20px;
+  background: #f8fafc;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.contact-info h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.contact-info p {
+  color: #6b7280;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.contact-info li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* FORM */
+.contact-form {
+  background: #fff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+}
+
+.contact-form h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  color: #111827;
+}
+
+/* GRID */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+/* LABEL */
+.form-group label {
+  display: block; /* ✅ FIX */
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.required {
+  color: #dc2626;;
+  margin-left: 3px;
+  font-weight: 600;
+}
+
+/* INPUT */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  color: #111827;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+form select {
+  height: 42px;
+}
+
+::placeholder {
+  color: #9ca3af;
+}
+
+/* FOCUS */
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #0a3d62;
+  box-shadow: 0 0 0 2px rgba(10,61,98,0.08);
+  outline: none;
+}
+
+/* PHONE */
+.phone-group {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-group select {
+  width: 28%;
+}
+
+.phone-group input {
+  width: 72%;
+}
+
+/* BUTTON */
+form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border-radius: 8px;
+  border: none;
+  background: #0a3d62;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+form button:hover {
+  background: #08406b;
+}
+
+/* DISABLED BUTTON */
+form button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ERROR */
+.error {
+  color: #dc2626;
+  font-size: 12px;
+}
+
+/* ✅ TOAST (FIXED — outside media query) */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #16a34a;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s ease;
+  z-index: 9999;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: span 1;
+  }
+
+  .phone-group {
+    flex-direction: column;
+  }
+
+  .phone-group select,
+  .phone-group input {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,92 @@
+/* SECTION */
+.why-section {
+  padding: 70px 20px;
+  background: #f8f9fa;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* HEADING */
+.heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.why-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+.icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.why-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* HOVER EFFECT 🔥 */
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .heading {
+    font-size: 26px;
+  }
+
+  .subheading {
+    font-size: 14px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    padding: 20px;
+  }
+}

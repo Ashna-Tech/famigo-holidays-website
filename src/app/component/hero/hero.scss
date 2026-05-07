@@ -1,0 +1,222 @@
+/* ================= HERO SECTION ================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh; /* ✅ FIX: better mobile height */
+
+  background-image: url("/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #0f172a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  animation: heroZoom 16s ease-in-out infinite alternate;
+}
+
+/* ================= DARK OVERLAY ================= */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* slightly better contrast */
+  z-index: 1;
+}
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 16px; /* ✅ better spacing on mobile */
+  margin-top: 40px;
+  color: #E0F2FE;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 span {
+  color: #38BDF8;
+}
+
+.hero-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #e5e7eb;
+  max-width: 700px;
+  margin: 20px auto 35px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* ✅ prevent overflow */
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px; /* ✅ consistent */
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* PRIMARY BUTTON */
+
+.primary-btn {
+  background: #ff6b00;
+  color: #fff;
+}
+
+/* SECONDARY BUTTON */
+
+.secondary-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.secondary-btn:hover {
+  background: #ffffff;
+  color: #0a3d62; /* ✅ theme match */
+}
+
+/* ================= HERO ZOOM ANIMATION ================= */
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* ================= LARGE SCREENS ================= */
+
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .hero-content h2 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 19px;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: 90dvh; /* ✅ fix */
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85dvh;
+  }
+
+  .hero-content {
+    margin-top: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px; /* ✅ better alignment */
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 80dvh;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 220px;
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}

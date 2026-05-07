@@ -1,0 +1,86 @@
+<section class="popular-destinations">
+
+  <div class="container">
+
+    <!-- ================= DOMESTIC ================= -->
+    <h2 class="section-heading">
+      Domestic Holiday Packages
+    </h2>
+
+    <div class="destination-grid">
+
+      <ng-container *ngFor="let dest of destinations">
+
+        <div class="destination-card" *ngIf="dest.category === 'domestic'">
+
+          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
+
+          <div class="card-overlay">
+
+            <h3 class="destination-title">
+              {{ dest.name }}
+            </h3>
+
+            <div class="price">
+              <span>Starting From</span>
+              <h2>₹{{ dest.price }}</h2>
+            </div>
+
+            <button class="explore-btn">
+              Explore Package
+            </button>
+
+          </div>
+
+        </div>
+
+      </ng-container>
+
+    </div>
+
+    <!-- ================= INTERNATIONAL ================= -->
+    <h2 class="section-heading second">
+      International Holiday Packages
+    </h2>
+
+    <div class="destination-grid">
+
+      <ng-container *ngFor="let dest of destinations">
+
+        <div class="destination-card" *ngIf="dest.category === 'international'">
+
+          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
+
+          <div class="card-overlay">
+
+            <h3 class="destination-title">
+              {{ dest.name }}
+            </h3>
+
+            <div class="price">
+              <span>Starting From</span>
+              <h2>₹{{ dest.price }}</h2>
+            </div>
+
+            <button class="explore-btn">
+              Explore Package
+            </button>
+
+          </div>
+
+        </div>
+
+      </ng-container>
+
+    </div>
+
+    <!-- ================= VIEW ALL BUTTON ================= -->
+    <div class="view-all-wrapper">
+      <button routerLink="/packages" class="view-all-btn">
+        View All Packages →
+      </button>
+    </div>
+
+  </div>
+
+</section>

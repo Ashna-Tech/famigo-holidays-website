@@ -1,0 +1,32 @@
+<section class="packages-list">
+
+  <h2 class="heading">Available Packages</h2>
+
+  <div class="destination-grid">
+
+    <div class="destination-card"
+         *ngFor="let dest of filteredData">
+
+      <img [src]="dest.image" [alt]="dest.name">
+
+      <div class="card-content">
+
+        <h3>{{dest.name}} Tour Package</h3>
+
+        <p class="duration">{{dest.duration || '3N/4D'}}</p>
+
+        <div class="price">
+          ₹{{dest.price}}
+        </div>
+
+        <button class="view-btn">
+          View Details
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
