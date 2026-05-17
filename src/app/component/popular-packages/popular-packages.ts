@@ -15,8 +15,8 @@ export class PopularPackages {
     // INDIA 
     {
       name: 'Manali',
-      image: '/images/manali.jpg', /*<img src="/images/meghalaya.jpg" alt="Meghalaya Tour Package">*/
-      price: 12999,
+      image: '/images/manali.jpg',
+      price: 5999, 
       slug: 'manali',
       category: 'domestic'
 
@@ -61,7 +61,7 @@ export class PopularPackages {
     {
       name: 'Bali',
       image: '/images/bali.jpg',
-      price: 7499,
+      price: 22990,
       slug: 'bali',
       category: 'international'
 
@@ -69,8 +69,8 @@ export class PopularPackages {
 
     {
       name: 'Vietnam',
-      image: 'images/vietnam.jpg',
-      price: 8999,
+      image: '/images/vietnam.jpg',
+      price: 24000,
       slug: 'vietnam',
       category: 'international'
     },
@@ -79,7 +79,7 @@ export class PopularPackages {
       name: 'Dubai',
       slug: 'dubai',
       image: '/images/dubai.jpg',
-      price: 39999,
+      price: 29990,
       category: 'international'
     }
 

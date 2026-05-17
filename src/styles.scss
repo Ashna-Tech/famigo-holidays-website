@@ -1,20 +1,179 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Base Styling */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  color: #222;
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root{
+
+  --primary-color:#ff6b35;
+  --secondary-color:#222;
+  --text-color:#444;
+  --white:#fff;
+
+  --transition:0.3s ease;
+
 }
 
-/* Common Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}/* You can add global styles to this file, and also import other style files */
+/* =========================
+   HTML & BODY
+========================= */
+
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#ffffff;
+  color:#222;
+
+  width:100%;
+  overflow-x:hidden;
+  
+
+  line-height:1.6;
+
+  -webkit-font-smoothing:antialiased;
+}
+
+/* =========================
+   COMMON CONTAINER
+========================= */
+
+.container{
+  width:100%;
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:0 20px;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1{
+  font-size:clamp(36px,5vw,60px);
+  line-height:1.2;
+  font-weight:700;
+}
+
+h2{
+  font-size:clamp(28px,4vw,42px);
+  line-height:1.3;
+  font-weight:600;
+}
+
+h3{
+  font-size:clamp(22px,3vw,28px);
+  line-height:1.3;
+  font-weight:600;
+}
+
+p{
+  font-size:16px;
+  color:var(--text-color);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* =========================
+   BUTTON RESET
+========================= */
+
+button{
+  border:none;
+  outline:none;
+
+  cursor:pointer;
+
+  font-family:inherit;
+
+  background:none;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color: transparent;
+}
+/* =========================
+   COMMON BUTTON STYLE
+========================= */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:12px 24px;
+
+  border-radius:10px;
+
+  font-size:16px;
+  font-weight:600;
+
+  transition:var(--transition);
+
+  cursor:pointer;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* =========================
+   SECTION DEFAULT
+========================= */
+
+section{
+  position:relative;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width:768px){
+
+  .container{
+    padding:0 16px;
+  }
+
+  p{
+    font-size:15px;
+  }
+
+  .btn{
+    font-size:14px;
+    padding:11px 18px;
+  }
+
+}

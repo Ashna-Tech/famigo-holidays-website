@@ -1,117 +1,321 @@
 <section class="contact">
-  <div class="contact-wrapper">
 
-    <!-- LEFT -->
-    <div class="contact-info">
-      <h2>Plan Your Trip With Famigo Holidays</h2>
-      <p>Share your travel details and our team will contact you with the best plan.</p>
+  <div class="container">
 
-      <ul>
-        <li>✔ Religious & Luxury Tours</li>
-        <li>✔ Honeymoon & Family Packages</li>
-        <li>✔ Hotel & Transport Booking</li>
-        <li>✔ Best Price Guarantee</li>
-      </ul>
-    </div>
+    <div class="contact-wrapper">
 
-    <!-- RIGHT -->
-    <div class="contact-form">
-      <h3>Quick Inquiry</h3>
+      <!-- ================= LEFT CONTENT ================= -->
 
-      <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()" novalidate>
+      <div class="contact-info">
 
-        <div class="form-grid">
+        <span class="contact-tag">
+          Plan Your Journey
+        </span>
 
-          <!-- NAME -->
-          <div class="form-group">
-            <label>Full Name <span class="required">*</span></label>
-            <input type="text" formControlName="name" placeholder="Enter your name">
-          </div>
+        <h2>
+          Plan Your Trip With Famigo Holidays
+        </h2>
 
-          <!-- EMAIL -->
-          <div class="form-group">
-            <label>Email <span class="required">*</span></label>
-            <input type="email" formControlName="email" placeholder="Enter email">
-          </div>
+        <p>
+          Share your travel details and our team will connect with you
+          to create the perfect travel experience for your budget and comfort.
+        </p>
 
-          <!-- PHONE -->
-          <div class="form-group full">
-            <label>Mobile Number <span class="required">*</span></label>
+        <ul class="contact-features">
 
-            <div class="phone-group">
-              <select formControlName="countryCode">
-                <option *ngFor="let c of countryCodes" [value]="c.code">
-                  {{ c.code }}
-                </option>
-              </select>
+          <li>
+            ✔ Religious & Luxury Tours
+          </li>
 
-              <input type="tel" formControlName="phone" maxlength="10" placeholder="Enter mobile number"
-                (input)="onPhoneInput($event)">
+          <li>
+            ✔ Honeymoon & Family Packages
+          </li>
+
+          <li>
+            ✔ Hotel & Transport Booking
+          </li>
+
+          <li>
+            ✔ Affordable & Custom Packages
+          </li>
+
+          <li>
+            ✔ Quick WhatsApp Support
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- ================= RIGHT FORM ================= -->
+
+      <div class="contact-form">
+
+        <div class="form-header">
+
+          <h3>
+            Quick Inquiry
+          </h3>
+
+          <p>
+            Fill out the form and we’ll get back to you shortly.
+          </p>
+
+        </div>
+
+        <form
+          [formGroup]="enquiryForm"
+          (ngSubmit)="submitForm()"
+          novalidate>
+
+          <div class="form-grid">
+
+            <!-- ================= NAME ================= -->
+
+            <div class="form-group">
+
+              <label for="name">
+                Full Name
+                <span class="required">*</span>
+              </label>
+
+              <input
+                id="name"
+                type="text"
+                formControlName="name"
+                placeholder="Enter your full name"
+                autocomplete="name">
+
             </div>
 
-            <small class="error" *ngIf="enquiryForm.get('phone')?.touched && enquiryForm.get('phone')?.invalid">
-              Enter valid 10-digit number
-            </small>
+            <!-- ================= EMAIL ================= -->
+
+            <div class="form-group">
+
+              <label for="email">
+                Email Address
+                <span class="required">*</span>
+              </label>
+
+              <input
+                id="email"
+                type="email"
+                formControlName="email"
+                placeholder="Enter your email"
+                autocomplete="email">
+
+            </div>
+
+            <!-- ================= PHONE ================= -->
+
+            <div class="form-group full">
+
+              <label for="phone">
+                Mobile Number
+                <span class="required">*</span>
+              </label>
+
+              <div class="phone-group">
+
+                <select formControlName="countryCode">
+
+                  <option
+                    *ngFor="let c of countryCodes"
+                    [value]="c.code">
+
+                    {{ c.code }}
+
+                  </option>
+
+                </select>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  formControlName="phone"
+                  maxlength="10"
+                  inputmode="numeric"
+                  autocomplete="tel"
+                  pattern="[0-9]*"
+                  placeholder="Enter mobile number"
+                  (input)="onPhoneInput($event)">
+
+              </div>
+
+              <small
+                class="error"
+                *ngIf="enquiryForm.get('phone')?.touched &&
+                       enquiryForm.get('phone')?.invalid">
+
+                Enter a valid 10-digit mobile number
+
+              </small>
+
+            </div>
+
+            <!-- ================= DESTINATION ================= -->
+
+            <div class="form-group">
+
+              <label for="destination">
+                Destination
+                <span class="required">*</span>
+              </label>
+
+              <input
+                id="destination"
+                type="text"
+                formControlName="destination"
+                placeholder="Goa, Manali, Dubai">
+
+            </div>
+
+            <!-- ================= TRAVELERS ================= -->
+
+            <div class="form-group">
+
+              <label for="travelers">
+                Number of Travelers
+              </label>
+
+              <select
+                id="travelers"
+                formControlName="travelers">
+
+                <option value="">
+                  Select Travelers
+                </option>
+
+                <option value="1">
+                  1 Person
+                </option>
+
+                <option value="2">
+                  2 People
+                </option>
+
+                <option value="3">
+                  3 People
+                </option>
+
+                <option value="4">
+                  4 People
+                </option>
+
+                <option value="5">
+                  5 People
+                </option>
+
+                <option value="6-10">
+                  6–10 People
+                </option>
+
+                <option value="10+">
+                  More than 10
+                </option>
+
+              </select>
+
+            </div>
+
+            <!-- ================= HOTEL ================= -->
+
+            <div class="form-group">
+
+              <label for="hotel">
+                Hotel Preference
+              </label>
+
+              <select
+                id="hotel"
+                formControlName="hotel">
+
+                <option value="">
+                  Select Hotel Preference
+                </option>
+
+                <option value="budget">
+                  Budget (Below 3★)
+                </option>
+
+                <option value="3-star">
+                  3★ Standard
+                </option>
+
+                <option value="4-star">
+                  4★ Premium
+                </option>
+
+                <option value="5-star">
+                  5★ Luxury
+                </option>
+
+              </select>
+
+            </div>
+
+            <!-- ================= DATE ================= -->
+
+            <div class="form-group">
+
+              <label for="date">
+                Travel Date
+              </label>
+
+              <input
+                id="date"
+                type="date"
+                [min]="todayDate"
+                formControlName="date">
+
+            </div>
+
+            <!-- ================= MESSAGE ================= -->
+
+            <div class="form-group full">
+
+              <label for="message">
+                Your Message
+              </label>
+
+              <textarea
+                id="message"
+                rows="4"
+                formControlName="message"
+                placeholder="Trip details, budget, hotel preference, etc...">
+              </textarea>
+
+            </div>
+
           </div>
 
-          <!-- DESTINATION -->
-          <div class="form-group">
-            <label>Destination <span class="required">*</span></label>
-            <input type="text" formControlName="destination" placeholder="Goa, Manali, Dubai">
+          <!-- ================= BUTTON ================= -->
+
+          <button
+            type="submit"
+            class="submit-btn"
+            [disabled]="enquiryForm.invalid || loading">
+
+            {{ loading ? 'Sending...' : 'Send on WhatsApp' }}
+
+          </button>
+
+          <!-- ================= TOAST ================= -->
+
+          <div
+            class="toast"
+            *ngIf="showToast">
+
+            {{ toastMessage }}
+
           </div>
 
-          <!-- TRAVELERS -->
-          <div class="form-group">
-            <label>Number of Travelers</label>
-            <select formControlName="travelers">
-              <option value="">Select Travelers</option>
-              <option value="1">1 Person</option>
-              <option value="2">2 People</option>
-              <option value="3">3 People</option>
-              <option value="4">4 People</option>
-              <option value="5">5 People</option>
-              <option value="6-10">6–10 People</option>
-              <option value="10+">More than 10</option>
-            </select>
-          </div>
+        </form>
 
-          <!-- HOTEL -->
-          <div class="form-group">
-            <label>Hotel Preference</label>
-            <select formControlName="hotel">
-              <option value="">Select Hotel Preference</option>
-              <option value="budget">Budget (Below 3★)</option>
-              <option value="3-star">3★ Standard</option>
-              <option value="4-star">4★ Premium</option>
-              <option value="5-star">5★ Luxury</option>
-            </select>
-          </div>
+      </div>
 
-          <!-- DATE -->
-          <div class="form-group">
-            <label>Travel Date</label>
-            <input type="date" [min]="todayDate" formControlName="date">
-          </div>
-
-          <!-- MESSAGE -->
-          <div class="form-group full">
-            <label>Your Message</label>
-            <textarea formControlName="message" rows="3" placeholder="Trip details, budget, etc..."></textarea>
-          </div>
-
-        </div>
-
-        <button type="submit" [disabled]="enquiryForm.invalid || loading">
-          {{ loading ? 'Sending...' : 'Send Inquiry on WhatsApp' }}
-        </button>
-
-        <!-- Toast -->
-        <div class="toast" *ngIf="showToast">
-          {{ toastMessage }}
-        </div>
-
-      </form>
     </div>
 
   </div>
+
 </section>

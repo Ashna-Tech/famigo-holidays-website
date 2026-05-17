@@ -1,208 +1,432 @@
-/* NAVBAR */
-.navbar {
-  width: 100%;
-  background: linear-gradient(90deg,#0a3d62,#1e6fa8);
-  padding: 14px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  width:100%;
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:
+  linear-gradient(
+  90deg,
+  #0a3d62 0%,
+  #14558a 100%
+  );
+
+  padding:12px 40px;
+
+  box-shadow:
+  0 4px 20px rgba(0,0,0,0.08);
+
+  backdrop-filter:blur(10px);
 }
 
-/* WRAPPER */
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* =========================
+   WRAPPER
+========================= */
+
+.nav-wrapper{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:20px;
 }
 
-/* BRAND */
-.brand {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  cursor: pointer;
+/* =========================
+   BRAND
+========================= */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  font-size:26px;
+  font-weight:700;
+
+  color:#fff;
+
+  cursor:pointer;
+
+  letter-spacing:0.5px;
+
+  white-space:nowrap;
 }
 
-/* MENU */
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 35px;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+/* =========================
+   MENU
+========================= */
+
+.menu{
+  list-style:none;
+
+  display:flex;
+  align-items:center;
+
+  gap:40px;
+
+  margin:0;
+  padding:0;
 }
 
-/* LINKS */
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  padding-bottom: 4px;
-  position: relative;
-  cursor: pointer;
+/* =========================
+   LINKS
+========================= */
+
+.menu a{
+  position:relative;
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-size:15px;
+  font-weight:500;
+
+  padding-bottom:5px;
+
+  transition:0.3s ease;
+
+  cursor:pointer;
 }
 
-/* UNDERLINE */
-.menu a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #ffd166;
-  left: 0;
-  bottom: 0;
-  transition: 0.3s;
+/* underline */
+
+.menu a::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:0;
+
+  width:0%;
+
+  height:2px;
+
+  background:#ffd166;
+
+  transition:0.3s ease;
 }
 
 .menu a:hover::after,
-.menu a.active::after {
-  width: 100%;
+.menu a.active::after{
+  width:100%;
 }
 
-/* DROPDOWN */
-.dropdown {
-  position: relative;
+.menu a:hover,
+.menu a.active{
+  color:#ffd166;
 }
 
-/* dropdown hidden */
-.dropdown-menu {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  background: #fff;
-  min-width: 220px;
-  border-radius: 10px;
-  padding: 10px 0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+/* =========================
+   DROPDOWN
+========================= */
 
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: 0.3s ease;
+.dropdown{
+  position:relative;
 }
 
-/* desktop hover */
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+/* desktop hover only */
+
+@media (hover:hover){
+
+  .dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+
 }
 
-/* mobile click */
-.dropdown-menu.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.dropdown-menu{
+  position:absolute;
+
+  top:42px;
+  left:0;
+
+  min-width:240px;
+
+  background:#fff;
+
+  border-radius:12px;
+
+  padding:10px 0;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.15);
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(10px);
+
+  transition:0.3s ease;
 }
 
-/* dropdown items */
-.dropdown-menu li {
-  padding: 8px 20px;
+.dropdown-menu.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
 }
 
-.dropdown-menu a {
-  color: #333;
-  font-size: 14px;
+.dropdown-menu li{
+  padding:0;
 }
 
-.dropdown-menu a:hover {
-  color: #0a3d62;
+.dropdown-menu a{
+  display:block;
+
+  padding:12px 20px;
+
+  color:#333;
+
+  font-size:14px;
 }
 
-/* CTA */
-.cta {
-  background: #ffd166;
-  padding: 8px 18px;
-  border-radius: 25px;
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
+.dropdown-menu a:hover{
+  background:#f5f5f5;
+  color:#0a3d62;
 }
 
-/* MOBILE CTA hidden desktop */
-.mobile-cta {
-  display: none;
+/* =========================
+   CTA BUTTON
+========================= */
+
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#ffd166;
+  color:#000;
+
+  padding:10px 22px;
+
+  border-radius:16px;
+
+  font-weight:600;
+
+  text-decoration:none;
+
+  transition:0.3s ease;
+
+  white-space:nowrap;
 }
 
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  cursor: pointer;
+.cta:hover{
+  transform:translateY(-2px);
+
+  background:#ffca4d;
 }
 
-/* ================= MOBILE ================= */
+/* =========================
+   HAMBURGER
+========================= */
 
-@media (max-width: 768px) {
+.hamburger{
+  display:none;
 
-  .navbar {
-    padding: 12px 20px;
+  font-size:28px;
+
+  color:#fff;
+
+  cursor:pointer;
+}
+
+/* mobile CTA hidden desktop */
+
+.mobile-cta{
+  display:none;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:992px){
+
+  .menu{
+    gap:24px;
   }
 
-  .hamburger {
-    display: block;
-    font-size: 26px;
-    color: #fff;
+}
+
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width:768px){
+
+  .navbar{
+    padding:14px 20px;
   }
 
-  .menu {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background: #0a3d62;
-    flex-direction: column;
-    display: none;
-    padding: 20px 0;
+  .brand{
+    font-size:22px;
   }
 
-  .menu.active {
-    display: flex;
+  .hamburger{
+    display:block;
   }
 
-  .menu li {
-    width: 100%;
-    text-align: center;
+  .menu{
+    position:absolute;
+
+    top:100%;
+    left:0;
+    right:0;
+
+    width:100%;
+
+    background:#0a3d62;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:0;
+
+    padding:20px;
+
+    display:none;
+
+    border-top:
+    1px solid rgba(255,255,255,0.1);
+
+    animation:slideDown 0.3s ease;
+
+    z-index:999;
   }
 
-  .menu a {
-    display: block;
-    padding: 12px;
+  .menu.active{
+    display:flex;
   }
 
-  /* dropdown mobile fix */
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    background: transparent;
-    display: none;
+  .menu li{
+    width:100%;
   }
 
-  .dropdown-menu.show {
-    display: block;
+  .menu a{
+    display:block;
+
+    width:100%;
+
+    padding:14px 0;
+
+    font-size:15px;
   }
 
-  .dropdown-menu a {
-    color: #fff;
+  /* dropdown */
+
+  .dropdown-menu{
+    position:static;
+
+    opacity:1;
+    visibility:visible;
+
+    transform:none;
+
+    display:none;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    box-shadow:none;
+
+    border-radius:8px;
+
+    margin-top:5px;
+
+    padding:5px 10px;
   }
 
-  /* CTA control */
-  .cta {
-    display: none;
+  .dropdown-menu.show{
+    display:block;
   }
 
-  .mobile-cta {
-    display: block;
-    margin-top: 10px;
+  .dropdown-menu a{
+    color:#fff;
+
+    padding:12px;
+
+    font-size:14px;
   }
 
-  .mobile-cta a {
-    background: #ffd166;
-    color: #000;
-    border-radius: 8px;
-    padding: 12px;
-    display: block;
-    font-weight: 600;
+  .dropdown-menu a:hover{
+    background:
+    rgba(255,255,255,0.08);
+
+    color:#ffd166;
   }
+
+  /* desktop CTA hide */
+
+  .cta{
+    display:none;
+  }
+
+  /* mobile CTA */
+
+  .mobile-cta{
+    display:block;
+
+    margin-top:15px;
+
+    width:100%;
+  }
+
+  .mobile-cta a{
+    display:block;
+
+    background:#ffd166;
+    color:#000;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    font-weight:600;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+  .navbar{
+    padding:12px 16px;
+  }
+
+  .brand{
+    font-size:20px;
+  }
+
+}
+
+/* =========================
+   MENU ANIMATION
+========================= */
+
+@keyframes slideDown{
+
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
 }

@@ -3,32 +3,69 @@
   <div class="container">
 
     <!-- ================= DOMESTIC ================= -->
-    <h2 class="section-heading">
-      Domestic Holiday Packages
-    </h2>
+
+    <div class="section-header">
+
+      <h2 class="section-heading">
+        Domestic Holiday Packages
+      </h2>
+
+      <p class="section-subheading">
+        Explore beautiful destinations across India with comfortable stays & memorable experiences.
+      </p>
+
+    </div>
 
     <div class="destination-grid">
 
       <ng-container *ngFor="let dest of destinations">
 
-        <div class="destination-card" *ngIf="dest.category === 'domestic'">
+        <div
+          class="destination-card"
+          *ngIf="dest.category === 'domestic'">
 
-          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
+          <img
+            [src]="dest.image"
+            [alt]="dest.name"
+            loading="lazy">
 
           <div class="card-overlay">
 
-            <h3 class="destination-title">
-              {{ dest.name }}
-            </h3>
+            <!-- TOP -->
 
-            <div class="price">
-              <span>Starting From</span>
-              <h2>₹{{ dest.price }}</h2>
+            <div class="card-top">
+
+              <span class="package-badge">
+                Popular
+              </span>
+
             </div>
 
-            <button class="explore-btn">
-              Explore Package
-            </button>
+            <!-- BOTTOM -->
+
+            <div class="card-bottom">
+
+              <h3 class="destination-title">
+                {{ dest.name }}
+              </h3>
+
+              <div class="price">
+
+                <span class="starting-text">
+                  Starting From
+                </span>
+
+                <h2>
+                  ₹{{ dest.price }}
+                </h2>
+
+                <p class="sharing-text">
+                  Per Person on twin sharing
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -39,32 +76,69 @@
     </div>
 
     <!-- ================= INTERNATIONAL ================= -->
-    <h2 class="section-heading second">
-      International Holiday Packages
-    </h2>
+
+    <div class="section-header second-header">
+
+      <h2 class="section-heading">
+        International Holiday Packages
+      </h2>
+
+      <p class="section-subheading">
+        Discover world-class destinations with luxury travel experiences & unforgettable adventures.
+      </p>
+
+    </div>
 
     <div class="destination-grid">
 
       <ng-container *ngFor="let dest of destinations">
 
-        <div class="destination-card" *ngIf="dest.category === 'international'">
+        <div
+          class="destination-card"
+          *ngIf="dest.category === 'international'">
 
-          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
+          <img
+            [src]="dest.image"
+            [alt]="dest.name"
+            loading="lazy">
 
           <div class="card-overlay">
 
-            <h3 class="destination-title">
-              {{ dest.name }}
-            </h3>
+            <!-- TOP -->
 
-            <div class="price">
-              <span>Starting From</span>
-              <h2>₹{{ dest.price }}</h2>
+            <div class="card-top">
+
+              <span class="package-badge">
+                Trending
+              </span>
+
             </div>
 
-            <button class="explore-btn">
-              Explore Package
-            </button>
+            <!-- BOTTOM -->
+
+            <div class="card-bottom">
+
+              <h3 class="destination-title">
+                {{ dest.name }}
+              </h3>
+
+              <div class="price">
+
+                <span class="starting-text">
+                  Starting From
+                </span>
+
+                <h2>
+                  ₹{{ dest.price }}
+                </h2>
+
+                <p class="sharing-text">
+                  Per Person on twin sharing
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -74,11 +148,19 @@
 
     </div>
 
-    <!-- ================= VIEW ALL BUTTON ================= -->
+    <!-- ================= VIEW ALL ================= -->
+
     <div class="view-all-wrapper">
-      <button routerLink="/packages" class="view-all-btn">
+
+      <button
+      type="button"
+        routerLink="/packages"
+        class="view-all-btn">
+
         View All Packages →
+
       </button>
+
     </div>
 
   </div>

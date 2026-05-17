@@ -114,7 +114,7 @@ export class Contact implements OnInit {
 📝 Message:
 ${userMessage}`;
 
-    const whatsappNumber = '918755586891';
+    const whatsappNumber = '918077235910';
 
     const whatsappUrl =
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

@@ -1,18 +1,58 @@
-<!-- ================= HERO SECTION ================= -->
 <section class="hero">
-  <div class="hero-overlay"></div>
+  <div class="hero-blur blur-1"></div>
+  <div class="hero-blur blur-2"></div>
 
-  <div class="hero-content">
-    <h1>Famigo <span>Holidays</span></h1>
-    <h2>Crafting Journeys • Creating Memories</h2>
+  <div class="container hero-wrapper">
 
-    <p>
-      Luxury Religious Tours • Honeymoon Escapes • Family & Group Trips
-    </p>
+    <!-- LEFT CONTENT -->
 
-    <div class="hero-buttons">
-      <button class="btn primary-btn" routerLink="/packages">Explore Packages</button>
-      <button class="btn secondary-btn" routerLink="/contact">Plan Your Trip </button>
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        Explore The World ✈️
+      </span>
+
+      <h1>
+        Discover Amazing Journeys With
+        <span>Famigo Holidays</span>
+      </h1>
+
+      <p>
+        Luxury Religious Tours • Honeymoon Escapes • Family Vacations • International Adventures
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="btn primary-btn" routerLink="/packages">
+          Explore Packages
+        </button>
+
+        <button class="btn secondary-btn" routerLink="/contact">
+          Plan Your Trip
+        </button>
+
+      </div>
+
     </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="hero-image">
+
+      <picture>
+
+        <!-- MOBILE IMAGE -->
+
+        <source media="(max-width:768px)" srcset="/images/hero-mobile.jpg">
+
+        <!-- DESKTOP IMAGE -->
+
+        <img src="/images/hero-desktop.jpg" alt="Famigo Holidays" loading="eager" fetchpriority="high" decoding="async">
+
+      </picture>
+
+    </div>
+
   </div>
+
 </section>

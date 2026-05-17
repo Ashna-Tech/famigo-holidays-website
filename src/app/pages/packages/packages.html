@@ -69,7 +69,7 @@
 
     </div>
 
-    <!-- ================= EMPTY STATE (IMPORTANT) ================= -->
+    <!-- ================= EMPTY STATE ================= -->
 
     <div *ngIf="filteredPackages.length === 0" class="no-data">
       No packages found
@@ -85,11 +85,13 @@
 
           <!-- IMAGE -->
           <div class="image-box">
-            <img 
-              [src]="dest.image" 
+
+            <img
+              [src]="dest.image"
               [alt]="dest.name"
               loading="lazy"
               decoding="async">
+
           </div>
 
           <!-- CONTENT -->
@@ -98,8 +100,19 @@
             <h3>{{ dest.name }}</h3>
 
             <p class="price">
-              Starting From
-              <span>₹{{ dest.price }}</span>
+
+              <span class="starting-text">
+                Starting From
+              </span>
+
+              <span class="amount">
+                ₹{{ dest.price }}
+              </span>
+
+              <span class="sharing-text">
+                Per Person on twin sharing
+              </span>
+
             </p>
 
             <button
@@ -107,7 +120,9 @@
               class="book-btn"
               [routerLink]="['/contact']"
               [queryParams]="{ package: dest.slug }">
+
               Book Now →
+
             </button>
 
           </div>

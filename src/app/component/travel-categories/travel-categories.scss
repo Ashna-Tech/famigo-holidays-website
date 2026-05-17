@@ -1,119 +1,178 @@
-.travel-categories{
-  padding:70px 5%;
-  background:#f7f5fb;
-  text-align:center;
-}
+// /* =========================
+//    TRAVEL CATEGORIES SECTION
+// ========================= */
 
-/* headings */
+// .travel-categories{
+//   padding:70px 5%;
+//   background:#f7f5fb;
+//   text-align:center;
+// }
 
-.section-heading{
-  font-size:clamp(28px,4vw,38px);
-  font-weight:700;
-  color:#2d124f;
-}
+// /* =========================
+//    HEADINGS
+// ========================= */
 
-.section-subheading{
-  margin-top:10px;
-  font-size:16px;
-  color:#6b5b8a;
-  margin-bottom:50px;
-}
+// .section-heading{
+//   font-size:clamp(28px,4vw,38px);
+//   font-weight:700;
+//   color:#2d124f;
+// }
 
-/* grid */
+// .section-subheading{
+//   margin-top:10px;
+//   margin-bottom:50px;
 
-.category-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:30px;
-}
+//   font-size:16px;
+//   color:#6b5b8a;
+// }
 
-/* cards */
+// /* =========================
+//    GRID
+// ========================= */
 
-.category-card{
-  position:relative;
-  border-radius:20px;
-  overflow:hidden;
-  height:320px;
-  cursor:pointer;
-  box-shadow:0 15px 35px rgba(0,0,0,0.12);
-  transition:transform .3s ease, box-shadow .3s ease;
-}
+// .category-grid{
+//   display:grid;
 
-/* hover effect only desktop */
+//   grid-template-columns:
+//   repeat(auto-fit,minmax(240px,1fr));
 
-@media (hover:hover){
-.category-card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 45px rgba(0,0,0,0.18);
-}
-}
+//   gap:30px;
+// }
 
-/* image */
+// /* =========================
+//    CARDS
+// ========================= */
 
-.category-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+// .category-card{
+//   position:relative;
 
-/* overlay */
+//   overflow:hidden;
 
-.category-card .overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(58,21,95,.85),
-    rgba(58,21,95,.2)
-  );
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  padding:25px;
-  color:#fff;
-}
+//   border-radius:20px;
 
-/* text */
+//   aspect-ratio:4/5;
 
-.category-card h3{
-  font-size:26px;
-  font-weight:600;
-}
+//   cursor:pointer;
 
-.category-card span{
-  font-size:14px;
-  opacity:.9;
-}
+//   box-shadow:
+//   0 15px 35px rgba(0,0,0,0.12);
 
-/* tablet */
+//   transition:
+//   transform .3s ease,
+//   box-shadow .3s ease;
+// }
 
-@media(max-width:768px){
+// /* =========================
+//    HOVER EFFECT
+// ========================= */
 
-.category-card{
-height:260px;
-}
+// @media (hover:hover){
 
-}
+//   .category-card:hover{
+//     transform:translateY(-10px);
 
-/* small mobile */
+//     box-shadow:
+//     0 20px 45px rgba(0,0,0,0.18);
+//   }
 
-@media(max-width:480px){
+// }
 
-.category-grid{
-gap:20px;
-}
+// /* =========================
+//    IMAGE
+// ========================= */
 
-.category-card{
-height:240px;
-}
+// .category-card img{
+//   width:100%;
+//   height:100%;
 
-.category-card h3{
-font-size:22px;
-}
+//   object-fit:cover;
 
-}
+//   transition:transform .5s ease;
+// }
 
+// .category-card:hover img{
+//   transform:scale(1.05);
+// }
 
+// /* =========================
+//    OVERLAY
+// ========================= */
 
+// .category-card .overlay{
+//   position:absolute;
+//   inset:0;
 
+//   display:flex;
+//   flex-direction:column;
+//   justify-content:flex-end;
 
+//   padding:25px;
+
+//   color:#fff;
+
+//   background:
+//   linear-gradient(
+//     to top,
+//     rgba(58,21,95,.88),
+//     rgba(58,21,95,.18)
+//   );
+// }
+
+// /* =========================
+//    TEXT
+// ========================= */
+
+// .category-card h3{
+//   font-size:26px;
+//   font-weight:600;
+// }
+
+// .category-card span{
+//   font-size:14px;
+//   opacity:.9;
+// }
+
+// /* =========================
+//    TABLET
+// ========================= */
+
+// @media(max-width:768px){
+
+//   .travel-categories{
+//     padding:60px 20px;
+//   }
+
+//   .category-grid{
+//     gap:24px;
+//   }
+
+// }
+
+// /* =========================
+//    SMALL MOBILE
+// ========================= */
+
+// @media(max-width:480px){
+
+//   .travel-categories{
+//     padding:50px 16px;
+//   }
+
+//   .category-grid{
+//     gap:20px;
+//   }
+
+//   .section-subheading{
+//     margin-bottom:35px;
+//     font-size:14px;
+//   }
+
+//   .category-card h3{
+//     font-size:22px;
+//   }
+
+//   .category-card .overlay{
+//     padding:20px;
+//   }
+
+// }

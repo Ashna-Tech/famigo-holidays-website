@@ -1,211 +1,479 @@
-.contact {
-  padding: 80px 20px;
-  background: #f8fafc;
-  font-family: 'Inter', sans-serif;
+/* ================= CONTACT SECTION ================= */
+
+.contact{
+  padding:80px 20px 90px;
+  background:#f8fafc;
+  overflow:hidden;
 }
 
-.contact-wrapper {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: flex-start;
+/* ================= WRAPPER ================= */
+
+.contact-wrapper{
+  width:100%;
+  max-width:1100px;
+
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:50px;
+  align-items:flex-start;
 }
 
-/* LEFT */
-.contact-info h2 {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #1f2937;
+/* ================= LEFT CONTENT ================= */
+
+.contact-info{
+  padding-top:10px;
 }
 
-.contact-info p {
-  color: #6b7280;
-  margin-bottom: 16px;
-  line-height: 1.6;
+.contact-info h2{
+  font-size:clamp(28px,4vw,38px);
+  font-weight:700;
+  line-height:1.3;
+  color:#111827;
+
+  margin-bottom:14px;
 }
 
-.contact-info li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #374151;
+.contact-info p{
+  font-size:15px;
+  line-height:1.7;
+  color:#6b7280;
+
+  margin-bottom:24px;
+
+  max-width:520px;
 }
 
-/* FORM */
-.contact-form {
-  background: #fff;
-  padding: 32px;
-  border-radius: 14px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+.contact-info ul{
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
-.contact-form h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 22px;
-  color: #111827;
+.contact-info li{
+  font-size:15px;
+  color:#374151;
+
+  margin-bottom:14px;
+
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+
+  line-height:1.6;
 }
 
-/* GRID */
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+/* ================= FORM CARD ================= */
+
+.contact-form{
+  width:100%;
+
+  background:#ffffff;
+
+  padding:32px;
+
+  border-radius:22px;
+
+  border:1px solid rgba(0,0,0,0.05);
+
+  box-shadow:
+  0 12px 35px rgba(0,0,0,0.06);
 }
 
-.form-group.full {
-  grid-column: span 2;
+.contact-form h3{
+  font-size:22px;
+  font-weight:700;
+  color:#111827;
+
+  margin-bottom:10px;
 }
 
-/* LABEL */
-.form-group label {
-  display: block; /* ✅ FIX */
-  font-size: 13px;
-  margin-bottom: 6px;
-  color: #374151;
+.contact-form .form-subtitle{
+  font-size:14px;
+  line-height:1.6;
+  color:#6b7280;
+
+  margin-bottom:24px;
 }
 
-.required {
-  color: #dc2626;;
-  margin-left: 3px;
-  font-weight: 600;
+/* ================= GRID ================= */
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
 }
 
-/* INPUT */
+.form-group{
+  width:100%;
+}
+
+.form-group.full{
+  grid-column:span 2;
+}
+
+/* ================= LABEL ================= */
+
+.form-group label{
+  display:block;
+
+  font-size:13px;
+  font-weight:500;
+
+  margin-bottom:7px;
+
+  color:#374151;
+}
+
+.required{
+  color:#dc2626;
+  margin-left:3px;
+}
+
+/* ================= INPUTS ================= */
+
 form input,
 form select,
-form textarea {
-  width: 100%;
-  padding: 11px 12px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
-  color: #111827;
-  background: #fff;
-  transition: all 0.2s ease;
+form textarea{
+  width:100%;
+
+  padding:12px 14px;
+
+  border-radius:10px;
+
+  border:1px solid #d1d5db;
+
+  font-size:14px;
+  font-family:inherit;
+
+  background:#fff;
+  color:#111827;
+
+  transition:
+  border-color .25s ease,
+  box-shadow .25s ease;
+
+  appearance:none;
 }
 
-form select {
-  height: 42px;
+/* select */
+
+form select{
+  height:46px;
+  cursor:pointer;
 }
 
-::placeholder {
-  color: #9ca3af;
+/* textarea */
+
+form textarea{
+  resize:vertical;
+  min-height:110px;
 }
 
-/* FOCUS */
+/* placeholder */
+
+form input::placeholder,
+form textarea::placeholder{
+  color:#9ca3af;
+}
+
+/* focus */
+
 form input:focus,
 form select:focus,
-form textarea:focus {
-  border-color: #0a3d62;
-  box-shadow: 0 0 0 2px rgba(10,61,98,0.08);
-  outline: none;
+form textarea:focus{
+  outline:none;
+
+  border-color:#0a3d62;
+
+  box-shadow:
+  0 0 0 4px rgba(10,61,98,0.08);
 }
 
-/* PHONE */
-.phone-group {
-  display: flex;
-  gap: 10px;
+/* ================= PHONE GROUP ================= */
+
+.phone-group{
+  display:flex;
+  gap:10px;
+  width:100%;
 }
 
-.phone-group select {
-  width: 28%;
+.phone-group select{
+  width:30%;
+  min-width:90px;
 }
 
-.phone-group input {
-  width: 72%;
+.phone-group input{
+  width:70%;
 }
 
-/* BUTTON */
-form button {
-  width: 100%;
-  margin-top: 20px;
-  padding: 13px;
-  border-radius: 8px;
-  border: none;
-  background: #0a3d62;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s ease;
+/* ================= BUTTON ================= */
+
+form button{
+  width:100%;
+
+  margin-top:24px;
+
+  padding:14px 20px;
+
+  border:none;
+  border-radius:12px;
+
+  background:#0a3d62;
+  color:#fff;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:
+  background .3s ease,
+  transform .3s ease;
 }
 
-form button:hover {
-  background: #08406b;
+/* hover only desktop */
+
+@media (hover:hover){
+
+form button:hover{
+  background:#08406b;
+  transform:translateY(-2px);
 }
 
-/* DISABLED BUTTON */
-form button:disabled {
-  background: #9ca3af;
-  cursor: not-allowed;
 }
 
-/* ERROR */
-.error {
-  color: #dc2626;
-  font-size: 12px;
+/* disabled */
+
+form button:disabled{
+  background:#9ca3af;
+  cursor:not-allowed;
+  transform:none;
 }
 
-/* ✅ TOAST (FIXED — outside media query) */
-.toast {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #16a34a;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-size: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  animation: slideIn 0.3s ease;
-  z-index: 9999;
+/* ================= ERROR ================= */
+
+.error{
+  display:block;
+
+  margin-top:6px;
+
+  color:#dc2626;
+  font-size:12px;
+  line-height:1.4;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
+/* ================= TOAST ================= */
+
+.toast{
+  position:fixed;
+
+  bottom:20px;
+  right:20px;
+
+  background:#16a34a;
+  color:#fff;
+
+  padding:12px 18px;
+
+  border-radius:10px;
+
+  font-size:14px;
+  font-weight:500;
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,0.18);
+
+  animation:slideIn .3s ease;
+
+  z-index:9999;
+
+  max-width:320px;
+}
+
+/* ================= TOAST ANIMATION ================= */
+
+@keyframes slideIn{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
+
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
+/* ================= TABLET ================= */
 
-  .contact-info {
-    text-align: center;
-  }
+@media (max-width:992px){
+
+.contact{
+  padding:70px 18px 85px;
 }
 
-@media (max-width: 576px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
+.contact-wrapper{
+  grid-template-columns:1fr;
+  gap:40px;
+}
 
-  .form-group.full {
-    grid-column: span 1;
-  }
+.contact-info{
+  text-align:center;
+  padding-top:0;
+}
 
-  .phone-group {
-    flex-direction: column;
-  }
+.contact-info p{
+  margin-inline:auto;
+}
 
-  .phone-group select,
-  .phone-group input {
-    width: 100%;
-  }
+.contact-info ul{
+  max-width:500px;
+  margin:auto;
+}
 
-  .contact-form {
-    padding: 20px;
-  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:600px){
+
+.contact{
+  padding:55px 12px 80px;
+}
+
+.contact-wrapper{
+  gap:32px;
+}
+
+.contact-info h2{
+  font-size:26px;
+  line-height:1.35;
+}
+
+.contact-info p{
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.contact-info li{
+  font-size:14px;
+  margin-bottom:12px;
+}
+
+.contact-form{
+  padding:22px 18px;
+  border-radius:18px;
+}
+
+.contact-form h3{
+  font-size:20px;
+}
+
+.contact-form .form-subtitle{
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.form-grid{
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.form-group.full{
+  grid-column:span 1;
+}
+
+/* phone stacked */
+
+.phone-group{
+  flex-direction:column;
+}
+
+.phone-group select,
+.phone-group input{
+  width:100%;
+}
+
+form input,
+form select,
+form textarea{
+  font-size:14px;
+  padding:12px;
+}
+
+form textarea{
+  min-height:100px;
+}
+
+form button{
+  padding:14px;
+  font-size:14px;
+  border-radius:10px;
+}
+
+/* toast mobile */
+
+.toast{
+  left:14px;
+  right:14px;
+  bottom:16px;
+
+  max-width:none;
+
+  text-align:center;
+
+  font-size:13px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width:380px){
+
+.contact{
+  padding:50px 10px 75px;
+}
+
+.contact-info h2{
+  font-size:23px;
+}
+
+.contact-info p{
+  font-size:13px;
+}
+
+.contact-info li{
+  font-size:13px;
+}
+
+.contact-form{
+  padding:18px 14px;
+  border-radius:16px;
+}
+
+.contact-form h3{
+  font-size:18px;
+}
+
+.form-grid{
+  gap:14px;
+}
+
+form input,
+form select,
+form textarea{
+  font-size:13px;
+}
+
+form button{
+  font-size:13px;
+  padding:13px;
+}
+
 }
