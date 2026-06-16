@@ -20,18 +20,11 @@
 
       <ng-container *ngFor="let dest of destinations">
 
-        <div
-          class="destination-card"
-          *ngIf="dest.category === 'domestic'">
+        <div class="destination-card" *ngIf="dest.category === 'domestic'">
 
-          <img
-            [src]="dest.image"
-            [alt]="dest.name"
-            loading="lazy">
+          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
 
           <div class="card-overlay">
-
-            <!-- TOP -->
 
             <div class="card-top">
 
@@ -41,30 +34,36 @@
 
             </div>
 
-            <!-- BOTTOM -->
-
             <div class="card-bottom">
 
               <h3 class="destination-title">
                 {{ dest.name }}
               </h3>
 
-              <div class="price">
+              <!-- Package Details -->
 
-                <span class="starting-text">
-                  Starting From
-                </span>
+              <div class="package-info">
+
+                <span> {{ dest.duration }} </span>
+
+                <span> {{ dest.packageType }} </span>
+
+
+              </div>
+
+              <!-- Price -->
+
+              <div class="price">
 
                 <h2>
                   ₹{{ dest.price }}
                 </h2>
 
                 <p class="sharing-text">
-                  Per Person on twin sharing
+                  Per Person on Twin Sharing
                 </p>
 
               </div>
-
             </div>
 
           </div>
@@ -93,18 +92,11 @@
 
       <ng-container *ngFor="let dest of destinations">
 
-        <div
-          class="destination-card"
-          *ngIf="dest.category === 'international'">
+        <div class="destination-card" *ngIf="dest.category === 'international'">
 
-          <img
-            [src]="dest.image"
-            [alt]="dest.name"
-            loading="lazy">
+          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
 
           <div class="card-overlay">
-
-            <!-- TOP -->
 
             <div class="card-top">
 
@@ -114,30 +106,39 @@
 
             </div>
 
-            <!-- BOTTOM -->
-
             <div class="card-bottom">
 
               <h3 class="destination-title">
                 {{ dest.name }}
               </h3>
 
-              <div class="price">
+              <!-- Package Details -->
 
-                <span class="starting-text">
-                  Starting From
+              <div class="package-info">
+
+                <span>
+                  {{ dest.duration }}
                 </span>
+
+                <span>
+                  {{ dest.packageType }}
+                </span>
+
+              </div>
+
+              <!-- Price -->
+
+              <div class="price">
 
                 <h2>
                   ₹{{ dest.price }}
                 </h2>
 
                 <p class="sharing-text">
-                  Per Person on twin sharing
+                  Per Person on Twin Sharing
                 </p>
 
               </div>
-
             </div>
 
           </div>
@@ -152,17 +153,23 @@
 
     <div class="view-all-wrapper">
 
-      <button
-      type="button"
-        routerLink="/packages"
-        class="view-all-btn">
-
-        View All Packages →
-
-      </button>
-
+     <button
+  type="button"
+  class="view-all-btn"
+  [routerLink]="['/packages']">
+  View All Packages →
+</button>
     </div>
+    
+    <!-- SEO CONTENT -->
+    <section class="packages-content">
+      <h2>Best Domestic and International Holiday Packages</h2>
 
+      <p>
+        Famigo Holidays offers domestic and international tour packages
+        including Manali, Kerala, Jaipur, Meghalaya, Thailand, Bali,
+        Vietnam and Dubai. Our holiday packages are designed for
+        couples, families, honeymoon travelers and groups.
+      </p>
+    </section>
   </div>
-
-</section>

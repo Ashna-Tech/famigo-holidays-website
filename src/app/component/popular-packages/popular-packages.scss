@@ -116,6 +116,7 @@
   display:block;
 
   transition:transform .5s ease;
+  will-change: transform;
 }
 
 /* ================= OVERLAY ================= */
@@ -170,8 +171,8 @@
 .card-bottom{
   display:flex;
   flex-direction:column;
-
-  gap:10px;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .destination-title{
@@ -180,6 +181,42 @@
   font-size:22px;
   font-weight:700;
   line-height:1.3;
+
+  min-height:58px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.package-info{
+  display:flex;
+  flex-wrap:nowrap;
+  gap:10px;
+  align-items: center;
+  margin:8px 0 12px;
+  min-height: 44px;
+}
+
+.package-info span{
+ display:flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:34px;
+
+  white-space:nowrap;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // min-height: 34px;
+  // background:rgba(255,255,255,0.15);
+  // color:#fff;
+  // font-size:12px;
+  // font-weight:500;
+  // padding:6px 12px;
+  // border-radius:20px;
+  // backdrop-filter:blur(4px);
+  // text-align:center;
+  // white-space: nowrap;
 }
 
 /* ================= PRICE ================= */
@@ -188,6 +225,7 @@
   display:flex;
   flex-direction:column;
   gap:3px;
+  margin-top: auto;
 }
 
 .price span{
@@ -277,6 +315,42 @@
 
   box-shadow:
   0 10px 25px rgba(10,61,98,0.18);
+}
+
+.packages-content{
+  max-width:900px;
+  margin:60px auto 0;
+  text-align:center;
+  padding:0 20px;
+}
+
+.packages-content h2{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#111827;
+}
+
+.packages-content p{
+  font-size:16px;
+  line-height:1.8;
+  color:#6b7280;
+}
+
+@media (max-width:768px){
+
+  .packages-content{
+    margin-top:50px;
+  }
+
+  .packages-content h2{
+    font-size:24px;
+  }
+
+  .packages-content p{
+    font-size:14px;
+  }
+
 }
 
 /* ================= BUTTON HOVER ================= */
@@ -379,12 +453,9 @@
 
 .destination-card{
   width:100%;
-
   border-radius:20px;
-
   aspect-ratio:4/4.8;
 }
-
 .card-overlay{
   padding:18px;
 }

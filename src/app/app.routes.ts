@@ -16,6 +16,11 @@ export const routes: Routes = [
     },
 
     {
+        path: 'packages/:type',
+        component: Packages
+    },
+
+    {
         path: 'about',
         component: About
     },

@@ -6,11 +6,10 @@ import { WhyChooseUs } from '../../component/why-choose-us/why-choose-us';
 import { Cta } from '../../component/cta/cta';
 import { Contact } from '../contact/contact';
 import { Services } from '../../component/services/services';
-import { TravelCategories } from '../../component/travel-categories/travel-categories';
 
 @Component({
   selector: 'app-home',
-  imports: [Contact,Hero,Services,PopularPackages,Testimonials,WhyChooseUs,Cta,TravelCategories],   
+  imports: [Contact,Hero,Services,PopularPackages,Testimonials,WhyChooseUs,Cta],   
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

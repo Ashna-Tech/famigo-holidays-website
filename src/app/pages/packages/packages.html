@@ -6,8 +6,8 @@
 
     <h2 class="section-heading">
       {{ selectedType === 'all'
-        ? 'Explore Our Packages'
-        : (selectedType | titlecase) + ' Packages' }}
+      ? 'Explore Our Packages'
+      : (selectedType | titlecase) + ' Packages' }}
     </h2>
 
     <p class="section-subtitle">
@@ -19,51 +19,30 @@
     <div class="filter-tabs">
 
       <!-- ALL -->
-      <button
-        type="button"
-        class="filter-btn"
-        [class.active]="selectedType === 'all'"
-        routerLink="/packages">
+      <button type="button" class="filter-btn" [class.active]="selectedType === 'all'" routerLink="/packages">
         All
       </button>
 
       <!-- DOMESTIC -->
-      <button
-        type="button"
-        class="filter-btn"
-        [class.active]="selectedType === 'domestic'"
-        [routerLink]="['/packages']"
-        [queryParams]="{ type: 'domestic' }">
+      <button type="button" class="filter-btn" [class.active]="selectedType === 'domestic'"
+        routerLink="/packages/domestic">
         Domestic
       </button>
-
       <!-- INTERNATIONAL -->
-      <button
-        type="button"
-        class="filter-btn"
-        [class.active]="selectedType === 'international'"
-        [routerLink]="['/packages']"
-        [queryParams]="{ type: 'international' }">
+      <button type="button" class="filter-btn" [class.active]="selectedType === 'international'"
+        routerLink="/packages/international">
         International
       </button>
 
       <!-- HONEYMOON -->
-      <button
-        type="button"
-        class="filter-btn"
-        [class.active]="selectedType === 'honeymoon'"
-        [routerLink]="['/packages']"
-        [queryParams]="{ type: 'honeymoon' }">
+      <button type="button" class="filter-btn" [class.active]="selectedType === 'honeymoon'"
+        routerLink="/packages/honeymoon">
         Honeymoon
       </button>
 
       <!-- RELIGIOUS -->
-      <button
-        type="button"
-        class="filter-btn"
-        [class.active]="selectedType === 'religious'"
-        [routerLink]="['/packages']"
-        [queryParams]="{ type: 'religious' }">
+      <button type="button" class="filter-btn" [class.active]="selectedType === 'religious'"
+        routerLink="/packages/religious">
         Religious
       </button>
 
@@ -86,11 +65,7 @@
           <!-- IMAGE -->
           <div class="image-box">
 
-            <img
-              [src]="dest.image"
-              [alt]="dest.name"
-              loading="lazy"
-              decoding="async">
+            <img [src]="dest.image" [alt]="dest.name" loading="lazy" decoding="async">
 
           </div>
 
@@ -115,11 +90,7 @@
 
             </p>
 
-            <button
-              type="button"
-              class="book-btn"
-              [routerLink]="['/contact']"
-              [queryParams]="{ package: dest.slug }">
+            <button type="button" class="book-btn" [routerLink]="['/contact']" [queryParams]="{ package: dest.slug }">
 
               Book Now →
 

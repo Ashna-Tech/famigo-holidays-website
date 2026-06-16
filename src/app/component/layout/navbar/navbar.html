@@ -14,10 +14,8 @@
 
       <!-- Home -->
       <li>
-        <a routerLink="/home"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="{ exact: true }"
-           (click)="closeMenu()">
+        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()">
           Home
         </a>
       </li>
@@ -26,39 +24,38 @@
       <li class="dropdown">
 
         <!-- Desktop hover / Mobile click -->
-        <a (click)="toggleDropdown()">
+        <a routerLink="/packages" (click)="closeMenu()">
           Packages
         </a>
-
         <ul class="dropdown-menu" [class.show]="isDropdownOpen">
 
           <li>
-            <a routerLink="/packages" [queryParams]="{ type: 'religious' }" (click)="closeMenu()">
+            <a routerLink="/packages/religious" (click)="closeMenu()">
               Religious Tours
             </a>
           </li>
 
           <li>
-            <a routerLink="/packages" [queryParams]="{ type: 'domestic' }" (click)="closeMenu()">
+            <a routerLink="/packages/domestic" (click)="closeMenu()">
               Domestic Tours
             </a>
           </li>
 
           <li>
-            <a routerLink="/packages" [queryParams]="{ type: 'international' }" (click)="closeMenu()">
+            <a routerLink="/packages/international" (click)="closeMenu()">
               International Tours
             </a>
           </li>
 
           <li>
-            <a routerLink="/packages" [queryParams]="{ type: 'honeymoon' }" (click)="closeMenu()">
+            <a routerLink="/packages/honeymoon" (click)="closeMenu()">
               Honeymoon Packages
             </a>
           </li>
 
         </ul>
-      </li>
 
+      </li>
       <!-- About -->
       <li>
         <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">

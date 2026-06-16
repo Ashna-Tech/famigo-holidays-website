@@ -63,10 +63,7 @@
 
         </div>
 
-        <form
-          [formGroup]="enquiryForm"
-          (ngSubmit)="submitForm()"
-          novalidate>
+        <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()" novalidate>
 
           <div class="form-grid">
 
@@ -79,11 +76,7 @@
                 <span class="required">*</span>
               </label>
 
-              <input
-                id="name"
-                type="text"
-                formControlName="name"
-                placeholder="Enter your full name"
+              <input id="name" type="text" formControlName="name" placeholder="Enter your full name"
                 autocomplete="name">
 
             </div>
@@ -97,11 +90,7 @@
                 <span class="required">*</span>
               </label>
 
-              <input
-                id="email"
-                type="email"
-                formControlName="email"
-                placeholder="Enter your email"
+              <input id="email" type="email" formControlName="email" placeholder="Enter your email"
                 autocomplete="email">
 
             </div>
@@ -119,9 +108,7 @@
 
                 <select formControlName="countryCode">
 
-                  <option
-                    *ngFor="let c of countryCodes"
-                    [value]="c.code">
+                  <option *ngFor="let c of countryCodes" [value]="c.code">
 
                     {{ c.code }}
 
@@ -129,22 +116,12 @@
 
                 </select>
 
-                <input
-                  id="phone"
-                  type="tel"
-                  formControlName="phone"
-                  maxlength="10"
-                  inputmode="numeric"
-                  autocomplete="tel"
-                  pattern="[0-9]*"
-                  placeholder="Enter mobile number"
-                  (input)="onPhoneInput($event)">
+                <input id="phone" type="tel" formControlName="phone" maxlength="10" inputmode="numeric"
+                  autocomplete="tel" pattern="[0-9]*" placeholder="Enter mobile number" (input)="onPhoneInput($event)">
 
               </div>
 
-              <small
-                class="error"
-                *ngIf="enquiryForm.get('phone')?.touched &&
+              <small class="error" *ngIf="enquiryForm.get('phone')?.touched &&
                        enquiryForm.get('phone')?.invalid">
 
                 Enter a valid 10-digit mobile number
@@ -162,11 +139,7 @@
                 <span class="required">*</span>
               </label>
 
-              <input
-                id="destination"
-                type="text"
-                formControlName="destination"
-                placeholder="Goa, Manali, Dubai">
+              <input id="destination" type="text" formControlName="destination" placeholder="Goa, Manali, Dubai">
 
             </div>
 
@@ -178,9 +151,7 @@
                 Number of Travelers
               </label>
 
-              <select
-                id="travelers"
-                formControlName="travelers">
+              <select id="travelers" formControlName="travelers">
 
                 <option value="">
                   Select Travelers
@@ -226,9 +197,7 @@
                 Hotel Preference
               </label>
 
-              <select
-                id="hotel"
-                formControlName="hotel">
+              <select id="hotel" formControlName="hotel">
 
                 <option value="">
                   Select Hotel Preference
@@ -262,11 +231,7 @@
                 Travel Date
               </label>
 
-              <input
-                id="date"
-                type="date"
-                [min]="todayDate"
-                formControlName="date">
+              <input id="date" type="date" [min]="todayDate" formControlName="date">
 
             </div>
 
@@ -278,12 +243,9 @@
                 Your Message
               </label>
 
-              <textarea
-                id="message"
-                rows="4"
-                formControlName="message"
+              <textarea id="message" rows="4" formControlName="message"
                 placeholder="Trip details, budget, hotel preference, etc...">
-              </textarea>
+</textarea>
 
             </div>
 
@@ -291,10 +253,7 @@
 
           <!-- ================= BUTTON ================= -->
 
-          <button
-            type="submit"
-            class="submit-btn"
-            [disabled]="enquiryForm.invalid || loading">
+          <button type="submit" class="submit-btn" [disabled]="enquiryForm.invalid || loading">
 
             {{ loading ? 'Sending...' : 'Send on WhatsApp' }}
 
@@ -302,9 +261,7 @@
 
           <!-- ================= TOAST ================= -->
 
-          <div
-            class="toast"
-            *ngIf="showToast">
+          <div class="toast" *ngIf="showToast">
 
             {{ toastMessage }}
 
