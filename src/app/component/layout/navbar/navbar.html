@@ -1,84 +1,128 @@
 <nav class="navbar">
   <div class="container nav-wrapper">
 
-    <!-- Brand -->
-    <div class="brand" routerLink="/home">✈️ Famigo</div>
+    <!-- Brand / Home -->
+    <a
+      class="brand"
+      routerLink="/"
+      aria-label="Famigo Holidays - Home"
+    ></a>
 
     <!-- Hamburger -->
-    <div class="hamburger" (click)="toggleMenu()">
+    <button
+      type="button"
+      class="hamburger"
+      (click)="toggleMenu()"
+      aria-label="Open navigation menu"
+      [attr.aria-expanded]="isMenuOpen"
+    >
       ☰
-    </div>
+    </button>
 
     <!-- Menu -->
     <ul class="menu" [class.active]="isMenuOpen">
 
       <!-- Home -->
       <li>
-        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-          (click)="closeMenu()">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
           Home
         </a>
       </li>
 
       <!-- Packages -->
       <li class="dropdown">
-
-        <!-- Desktop hover / Mobile click -->
-        <a routerLink="/packages" (click)="closeMenu()">
+        <a
+          routerLink="/packages"
+          (click)="closeMenu()"
+        >
           Packages
         </a>
-        <ul class="dropdown-menu" [class.show]="isDropdownOpen">
 
+        <ul
+          class="dropdown-menu"
+          [class.show]="isDropdownOpen"
+        >
           <li>
-            <a routerLink="/packages/religious" (click)="closeMenu()">
+            <a
+              routerLink="/packages/religious"
+              (click)="closeMenu()"
+            >
               Religious Tours
             </a>
           </li>
 
           <li>
-            <a routerLink="/packages/domestic" (click)="closeMenu()">
+            <a
+              routerLink="/packages/domestic"
+              (click)="closeMenu()"
+            >
               Domestic Tours
             </a>
           </li>
 
           <li>
-            <a routerLink="/packages/international" (click)="closeMenu()">
+            <a
+              routerLink="/packages/international"
+              (click)="closeMenu()"
+            >
               International Tours
             </a>
           </li>
 
           <li>
-            <a routerLink="/packages/honeymoon" (click)="closeMenu()">
+            <a
+              routerLink="/packages/honeymoon"
+              (click)="closeMenu()"
+            >
               Honeymoon Packages
             </a>
           </li>
-
         </ul>
-
       </li>
+
       <!-- About -->
       <li>
-        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+        <a
+          routerLink="/about"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
           About Us
         </a>
       </li>
 
       <!-- Contact -->
       <li>
-        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+        <a
+          routerLink="/contact"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
           Contact
         </a>
       </li>
 
       <!-- Mobile CTA -->
       <li class="mobile-cta">
-        <a (click)="handleCallClick()">Call Now</a>
+        <a (click)="handleCallClick()">
+          Call Now
+        </a>
       </li>
 
     </ul>
 
     <!-- Desktop CTA -->
-    <a class="cta" (click)="handleCallClick()">Call Now</a>
+    <a
+      class="cta"
+      (click)="handleCallClick()"
+    >
+      Call Now
+    </a>
 
   </div>
 </nav>

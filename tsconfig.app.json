@@ -5,7 +5,8 @@
     "outDir": "./out-tsc/app",
     "rootDir": "./src",
     "types": [
-      "node"
+      "node",
+      "express"
     ]
   },
 

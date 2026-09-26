@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
-import { Packages } from '../../pages/packages/packages';
+// import { Packages } from '../../pages/packages/packages';
 
 @Component({
   selector: 'app-hero',
-  imports: [RouterLink,RouterModule,Packages,],
+  imports: [RouterLink,RouterModule],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

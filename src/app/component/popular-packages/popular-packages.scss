@@ -67,7 +67,10 @@
 /* ================= CARD ================= */
 
 .destination-card{
+
   position:relative;
+
+  display:block;
 
   overflow:hidden;
 
@@ -82,11 +85,18 @@
 
   transition:
   transform .35s ease,
+
   box-shadow .35s ease;
 
   -webkit-tap-highlight-color:transparent;
-}
 
+  text-decoration:none;
+
+  color:inherit;
+
+  cursor:pointer;
+
+}
 /* ================= HOVER ================= */
 
 @media (hover:hover){
@@ -204,19 +214,7 @@
   min-height:34px;
 
   white-space:nowrap;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // min-height: 34px;
-  // background:rgba(255,255,255,0.15);
-  // color:#fff;
-  // font-size:12px;
-  // font-weight:500;
-  // padding:6px 12px;
-  // border-radius:20px;
-  // backdrop-filter:blur(4px);
-  // text-align:center;
-  // white-space: nowrap;
+  
 }
 
 /* ================= PRICE ================= */

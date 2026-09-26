@@ -12,15 +12,14 @@
           Plan Your Journey
         </span>
 
-        <h2>
+        <h1>
           Plan Your Trip With Famigo Holidays
-        </h2>
+        </h1>
 
         <p>
           Share your travel details and our team will connect with you
           to create the perfect travel experience for your budget and comfort.
         </p>
-
         <ul class="contact-features">
 
           <li>
@@ -106,12 +105,10 @@
 
               <div class="phone-group">
 
-                <select formControlName="countryCode">
+                <select id="countryCode" formControlName="countryCode" aria-label="Country code">
 
                   <option *ngFor="let c of countryCodes" [value]="c.code">
-
                     {{ c.code }}
-
                   </option>
 
                 </select>
@@ -139,7 +136,8 @@
                 <span class="required">*</span>
               </label>
 
-              <input id="destination" type="text" formControlName="destination" placeholder="Goa, Manali, Dubai">
+              <input id="destination" type="text" formControlName="destination" placeholder="Goa, Manali, Dubai"
+                autocomplete="off">
 
             </div>
 

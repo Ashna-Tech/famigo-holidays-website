@@ -1,23 +1,16 @@
 /* ================= CTA ================= */
 
-.cta{
-  padding:90px 20px;
+.cta {
+  padding: 90px 20px;
 
-  background:
-  linear-gradient(
+  background: linear-gradient(
     to right,
-    rgba(76,29,149,0.92),
-    rgba(88,28,135,0.92)
-  ),
-  url('/images/cta-bg.jpg');
+    rgba(76, 29, 149, 0.92),
+    rgba(88, 28, 135, 0.92)
+  );
 
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-
-  text-align:center;
-
-  overflow:hidden;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* ================= CONTENT ================= */

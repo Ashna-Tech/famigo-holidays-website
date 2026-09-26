@@ -20,9 +20,10 @@
 
       <ng-container *ngFor="let dest of destinations">
 
-        <div class="destination-card" *ngIf="dest.category === 'domestic'">
+        <a class="destination-card" *ngIf="dest.category === 'domestic'" [routerLink]="['/contact']"
+          [queryParams]="{ package: dest.slug }" [attr.aria-label]="'Enquire about ' + dest.name + ' holiday package'">
 
-          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
+          <img [src]="dest.image" [alt]="dest.name + ' holiday package - Famigo Holidays'" loading="lazy">
 
           <div class="card-overlay">
 
@@ -68,7 +69,7 @@
 
           </div>
 
-        </div>
+        </a>
 
       </ng-container>
 
@@ -92,9 +93,10 @@
 
       <ng-container *ngFor="let dest of destinations">
 
-        <div class="destination-card" *ngIf="dest.category === 'international'">
+        <a class="destination-card" *ngIf="dest.category === 'international'" [routerLink]="['/contact']"
+          [queryParams]="{ package: dest.slug }" [attr.aria-label]="'Enquire about ' + dest.name + ' holiday package'">
 
-          <img [src]="dest.image" [alt]="dest.name" loading="lazy">
+          <img [src]="dest.image" [alt]="dest.name + ' international holiday package - Famigo Holidays'" loading="lazy">
 
           <div class="card-overlay">
 
@@ -143,7 +145,7 @@
 
           </div>
 
-        </div>
+        </a>
 
       </ng-container>
 
@@ -153,14 +155,11 @@
 
     <div class="view-all-wrapper">
 
-     <button
-  type="button"
-  class="view-all-btn"
-  [routerLink]="['/packages']">
-  View All Packages →
-</button>
+      <button type="button" class="view-all-btn" [routerLink]="['/packages']">
+        View All Packages →
+      </button>
     </div>
-    
+
     <!-- SEO CONTENT -->
     <section class="packages-content">
       <h2>Best Domestic and International Holiday Packages</h2>
@@ -173,3 +172,4 @@
       </p>
     </section>
   </div>
+</section>

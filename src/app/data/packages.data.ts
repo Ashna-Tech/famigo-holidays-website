@@ -8,7 +8,7 @@ export const PACKAGES: Package[] = [
   {
   name: 'Goa',
   image: '/images/goa.webp',
-  price: 10999,
+  price: 8999,
   slug: 'goa',
   category: 'domestic'
 },
@@ -32,7 +32,7 @@ export const PACKAGES: Package[] = [
 {
   name: 'Ladakh',
   image: '/images/ladakh.webp',
-  price: 21999,
+  price: 17999,
   slug: 'ladakh',
   category: 'domestic'
 },
@@ -99,8 +99,8 @@ export const PACKAGES: Package[] = [
 
 {
   name: 'Manali By Volvo',
-  image: '/images/manali-couple.webp',
-  price: 24999,
+  image: '/images/manali-volvo.webp',
+  price: 6999,
   slug: 'manali-by-volvo',
   category: 'honeymoon'
 },

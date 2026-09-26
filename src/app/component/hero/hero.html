@@ -1,10 +1,38 @@
 <section class="hero">
-  <div class="hero-blur blur-1"></div>
-  <div class="hero-blur blur-2"></div>
 
+  <!-- Responsive Hero Image -->
+  <div class="hero-background">
+    <picture>
+
+      <!-- Mobile -->
+      <source
+        media="(max-width: 768px)"
+        srcset="/images/hero-mobile.webp"
+      />
+
+      <!-- Tablet -->
+      <source
+        media="(max-width: 1199px)"
+        srcset="/images/hero-tablet.webp"
+      />
+
+      <!-- Desktop -->
+      <img
+        src="/images/hero-desktop.webp"
+        alt="Famigo Holidays tour and holiday packages"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+
+    </picture>
+  </div>
+
+  <!-- Text readability overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Hero Content -->
   <div class="container hero-wrapper">
-
-    <!-- LEFT CONTENT -->
 
     <div class="hero-content">
 
@@ -18,38 +46,29 @@
       </h1>
 
       <p>
-        Luxury Religious Tours • Honeymoon Escapes • Family Vacations • International Adventures
+        Luxury Religious Tours • Honeymoon Escapes •
+        Family Vacations • International Adventures
       </p>
 
       <div class="hero-buttons">
 
-        <button class="btn primary-btn" routerLink="/packages">
+        <button
+          type="button"
+          class="btn primary-btn"
+          routerLink="/packages"
+        >
           Explore Packages
         </button>
 
-        <button class="btn secondary-btn" routerLink="/contact">
+        <button
+          type="button"
+          class="btn secondary-btn"
+          routerLink="/contact"
+        >
           Plan Your Trip
         </button>
 
       </div>
-
-    </div>
-
-    <!-- RIGHT IMAGE -->
-
-    <div class="hero-image">
-
-      <picture>
-
-        <!-- MOBILE IMAGE -->
-
-        <source media="(max-width:768px)" srcset="/images/hero-mobile.webp">
-
-        <!-- DESKTOP IMAGE -->
-
-        <img src="/images/hero-desktop.webp" alt="Famigo Holidays" loading="eager" fetchpriority="high" decoding="async">
-
-      </picture>
 
     </div>
 
